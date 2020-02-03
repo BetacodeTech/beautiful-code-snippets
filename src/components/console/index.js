@@ -1,34 +1,15 @@
 import React from 'react';
 import "./style.css"
 import Highlight from 'react-highlight'
-
-
-const code = `function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\\bno\\-highlight\\b/) != -1)
-      return process(block, true, 0x0F) +
-             \` class="sssss"\`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      console.log('undefined');
-  }
-
-  return (
-    <div>
-      <web-component>{block}</web-component>
-    </div>
-  )
-}
-
-export  $initHighlight;`;
+import {useSelector} from "react-redux";
 
 const language = "javascript";
 
 
 const Console = () => {
+
+    const code = useSelector(state => state.snipet.code);
+    const codeType = useSelector(state => state.snipet.codeType);
 
     return (
         <div class="console">
@@ -38,7 +19,7 @@ const Console = () => {
                 <div class="dot dot-green"></div>
             </div>
             <div class="content">
-                <Highlight className={language}>
+                <Highlight className={codeType}>
                     {code}
                 </Highlight>
             </div>

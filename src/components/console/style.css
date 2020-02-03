@@ -7,14 +7,18 @@
 }
 
 .console .content {
+    text-align: left;
     padding: 10px 17px 10px;
+    font-size: 20px;
+
 }
 
 .console {
     max-width: 1280px;
+    min-width: 900px;
     margin:0 auto;
     min-height: auto;
-    background: #2b2b2b;
+    background: #002b36;
     border-radius: 3px;
     -webkit-box-shadow: 2px 3px 30px -9px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 3px 30px -9px rgba(0, 0, 0, 0.75);
