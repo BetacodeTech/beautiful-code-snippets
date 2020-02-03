@@ -57,9 +57,9 @@ function snipet(state = initialState, action) {
     switch (action.type) {
         case types.SET_SNIPET:
             const {code, author, authorImage, codeType, social} = action;
-            return {...initialState, code, author, authorImage, codeType, social};
+            return {...state, code, author, authorImage, codeType, social};
         case types.TOOGLE_DIALOG:
-            return {...initialState, dialogOpen: action.open};
+            return {...state, dialogOpen: action.open};
         default:
             return state
     }
